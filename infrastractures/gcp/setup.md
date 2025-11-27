@@ -244,3 +244,10 @@ dig app.example.com +short
 ```
 
 Both commands should return `[YOUR_GCP_VM_EXTERNAL_IP]`. Once verified, your domains will route through Nginx to the appropriate containerized service.
+
+Deploy on VM instance by accessing through ssh
+
+Authenticate GCP to pull docker images from artifact registry
+```bash
+gcloud auth configure-docker LOCATION-docker.pkg.dev
+```
